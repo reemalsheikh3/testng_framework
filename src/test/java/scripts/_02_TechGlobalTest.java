@@ -1,7 +1,5 @@
 package scripts;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,10 +16,8 @@ public class _02_TechGlobalTest extends Base {
     public void testApplicationFormHeading() {
         driver.get("https://www.techglobalschool.com/apply-now");
 
-        WebElement heading1 = driver.findElement(By.xpath("//span[text()='Application Form']"));
-
-        Assert.assertTrue(heading1.isDisplayed());
-        Assert.assertEquals(heading1.getText(), "Application Form");
+        Assert.assertTrue(tgApplicationPage.heading1.isDisplayed());
+        Assert.assertEquals(tgApplicationPage.heading1.getText(), "Application Form");
     }
 
 
