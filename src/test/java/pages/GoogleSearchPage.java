@@ -16,4 +16,7 @@ public class GoogleSearchPage {
 
     @FindBy(css = "input[value='Google Search']")
     public WebElement searchButton;
+
+    @FindBy(linkText = "Store")
+    public WebElement storeLink;
 }
