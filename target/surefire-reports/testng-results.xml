@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="6" total="14" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-05-29T15:58:22 CDT" name="Regression" finished-at="2022-05-29T16:00:13 CDT" duration-ms="110792">
+    <groups>
+    </groups>
+    <test started-at="2022-05-29T15:58:22 CDT" name="All Functionalities" finished-at="2022-05-29T16:00:13 CDT" duration-ms="110792">
+      <class name="scripts._03_EtsyTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:scripts._03_EtsyTest@68ceda24]" started-at="2022-05-29T15:58:32 CDT" name="setup" finished-at="2022-05-29T15:58:35 CDT" duration-ms="2237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testMainHeader()[pri:4, instance:scripts._03_EtsyTest@68ceda24]" started-at="2022-05-29T15:58:35 CDT" name="testMainHeader" description="TC905: Validate Etsy main header" finished-at="2022-05-29T15:58:39 CDT" duration-ms="4594" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMainHeader -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:scripts._03_EtsyTest@68ceda24]" started-at="2022-05-29T15:58:39 CDT" name="teardown" finished-at="2022-05-29T15:58:42 CDT" duration-ms="3305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- scripts._03_EtsyTest -->
+      <class name="scripts._07_DropdownTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:scripts._07_DropdownTest@103f852]" started-at="2022-05-29T15:59:12 CDT" name="setup" finished-at="2022-05-29T15:59:14 CDT" duration-ms="2228" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testUnsecurePasswordErrorMessage()[pri:1, instance:scripts._07_DropdownTest@103f852]" started-at="2022-05-29T15:59:14 CDT" name="testUnsecurePasswordErrorMessage" description="TC763: Validate Facebook sign in error message for password" finished-at="2022-05-29T15:59:19 CDT" duration-ms="5012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUnsecurePasswordErrorMessage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:scripts._07_DropdownTest@103f852]" started-at="2022-05-29T15:59:19 CDT" name="teardown" finished-at="2022-05-29T15:59:22 CDT" duration-ms="3224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:scripts._07_DropdownTest@103f852]" started-at="2022-05-29T15:59:22 CDT" name="setup" finished-at="2022-05-29T15:59:24 CDT" duration-ms="2204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testExpediaDropdowns()[pri:2, instance:scripts._07_DropdownTest@103f852]" started-at="2022-05-29T15:59:24 CDT" name="testExpediaDropdowns" description="TC578: Validate Expedia dropdowns" finished-at="2022-05-29T16:00:03 CDT" duration-ms="39126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testExpediaDropdowns -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:scripts._07_DropdownTest@103f852]" started-at="2022-05-29T16:00:03 CDT" name="teardown" finished-at="2022-05-29T16:00:07 CDT" duration-ms="3624" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:scripts._07_DropdownTest@103f852]" started-at="2022-05-29T16:00:07 CDT" name="setup" finished-at="2022-05-29T16:00:10 CDT" duration-ms="2605" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testEbayDropdown()[pri:3, instance:scripts._07_DropdownTest@103f852]" started-at="2022-05-29T16:00:10 CDT" name="testEbayDropdown" description="TC242: Validate Ebay dropdown" finished-at="2022-05-29T16:00:10 CDT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEbayDropdown -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:scripts._07_DropdownTest@103f852]" started-at="2022-05-29T16:00:10 CDT" name="teardown" finished-at="2022-05-29T16:00:13 CDT" duration-ms="3133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- scripts._07_DropdownTest -->
+      <class name="scripts._06_RadioButtonTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:scripts._06_RadioButtonTest@1f021e6c]" started-at="2022-05-29T15:59:02 CDT" name="setup" finished-at="2022-05-29T15:59:04 CDT" duration-ms="2140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testFacebookGenderRadioButtons()[pri:1, instance:scripts._06_RadioButtonTest@1f021e6c]" started-at="2022-05-29T15:59:04 CDT" name="testFacebookGenderRadioButtons" description="TC234: Validate Facebook gender radio buttons" finished-at="2022-05-29T15:59:08 CDT" duration-ms="4086" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFacebookGenderRadioButtons -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:scripts._06_RadioButtonTest@1f021e6c]" started-at="2022-05-29T15:59:08 CDT" name="teardown" finished-at="2022-05-29T15:59:12 CDT" duration-ms="3214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- scripts._06_RadioButtonTest -->
+      <class name="scripts._01_AppleTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:scripts._01_AppleTest@24b1d79b]" started-at="2022-05-29T15:58:22 CDT" name="setup" finished-at="2022-05-29T15:58:27 CDT" duration-ms="4712" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testAppleURL()[pri:2, instance:scripts._01_AppleTest@24b1d79b]" started-at="2022-05-29T15:58:27 CDT" name="testAppleURL" description="TC873" finished-at="2022-05-29T15:58:29 CDT" duration-ms="2336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAppleURL -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:scripts._01_AppleTest@24b1d79b]" started-at="2022-05-29T15:58:29 CDT" name="teardown" finished-at="2022-05-29T15:58:32 CDT" duration-ms="3270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- scripts._01_AppleTest -->
+      <class name="scripts._04_GoogleSearchTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:scripts._04_GoogleSearchTest@281e3708]" started-at="2022-05-29T15:58:42 CDT" name="setup" finished-at="2022-05-29T15:58:45 CDT" duration-ms="2209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testGoogleStoreLink()[pri:2, instance:scripts._04_GoogleSearchTest@281e3708]" started-at="2022-05-29T15:58:45 CDT" name="testGoogleStoreLink" description="TC123: Validate Google Store link" finished-at="2022-05-29T15:58:50 CDT" duration-ms="5662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGoogleStoreLink -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:scripts._04_GoogleSearchTest@281e3708]" started-at="2022-05-29T15:58:50 CDT" name="teardown" finished-at="2022-05-29T15:58:54 CDT" duration-ms="3288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- scripts._04_GoogleSearchTest -->
+      <class name="scripts._05_CheckBoxTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:scripts._05_CheckBoxTest@35a50a4c]" started-at="2022-05-29T15:58:54 CDT" name="setup" finished-at="2022-05-29T15:58:56 CDT" duration-ms="2186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testCheckBoxInHeroApp()[pri:1, instance:scripts._05_CheckBoxTest@35a50a4c]" started-at="2022-05-29T15:58:56 CDT" name="testCheckBoxInHeroApp" description="TC001: Validate checkbox in hero app" finished-at="2022-05-29T15:58:59 CDT" duration-ms="3124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckBoxInHeroApp -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:scripts._05_CheckBoxTest@35a50a4c]" started-at="2022-05-29T15:58:59 CDT" name="teardown" finished-at="2022-05-29T15:59:02 CDT" duration-ms="3184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- scripts._05_CheckBoxTest -->
+    </test> <!-- All Functionalities -->
+  </suite> <!-- Regression -->
+</testng-results>

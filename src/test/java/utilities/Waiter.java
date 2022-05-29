@@ -22,6 +22,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
         public static void waitUntilTitleIs(WebDriver driver,int seconds, String title){
             new WebDriverWait(driver, seconds).until(ExpectedConditions.titleIs(title));
         }
+
+        public static void waitUntilTextToBePresentInElement(WebDriver driver, int seconds, WebElement element, String text){
+            new WebDriverWait(driver, seconds).until(ExpectedConditions.textToBePresentInElement(element, text));
+        }
     }
 
 

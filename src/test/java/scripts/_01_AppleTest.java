@@ -20,6 +20,7 @@ public class _01_AppleTest extends Base{
          */
 
         Assert.assertEquals(actualTitle, expectedTitle);
+
     }
 
     @Test(priority = 2, description = "TC873")
