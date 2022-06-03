@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Regression" class="navigator-link">
-              <span class="suite-name border-passed">Regression</span>
+              <span class="suite-name border-failed">Regression</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods,   8 passed</span>
+                    <span class="method-stats">8 methods, 1 failed,   7 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Regression" class="hide-methods failed suite-Regression"> (hide)</a> <!-- hide-methods failed suite-Regression -->
+                      <a href="#" panel-name="suite-Regression" class="show-methods failed suite-Regression"> (show)</a> <!-- show-methods failed suite-Regression -->
+                    </span>
+                    <div class="method-list-content failed suite-Regression">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression" title="scripts._07_DropdownTest" class="method navigator-link" hash-for-method="testExpediaDropdowns">testExpediaDropdowns</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Regression -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -113,11 +127,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Regression" title="scripts._07_DropdownTest" class="method navigator-link" hash-for-method="testEbayDropdown">testEbayDropdown</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Regression" title="scripts._07_DropdownTest" class="method navigator-link" hash-for-method="testExpediaDropdowns">testExpediaDropdowns</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -152,19 +161,79 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Regression" class="panel Regression">
-          <div class="suite-Regression-class-passed">
+          <div class="suite-Regression-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">scripts._05_CheckBoxTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">scripts._07_DropdownTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testCheckBoxInHeroApp">
-                  </a> <!-- testCheckBoxInHeroApp -->
-                  <span class="method-name">testCheckBoxInHeroApp</span>
+                  <a name="testExpediaDropdowns">
+                  </a> <!-- testExpediaDropdowns -->
+                  <span class="method-name">testExpediaDropdowns</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#preferred\-class\-input&quot;}
+  (Session info: chrome=102.0.5005.61)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Reems-MacBook-Air.local&apos;, ip: &apos;2601:244:4801:930:6c1c:5e90:3426:1199%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.1&apos;, java.version: &apos;18.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/01/c_s4m6zs411...}, goog:chromeOptions: {debuggerAddress: localhost:58701}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: bcd7dd45e0360cb0401c2c19adf4a999
+*** Element info: {Using=id, value=preferred-class-input}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy10.click(Unknown Source)
+	at scripts._07_DropdownTest.testExpediaDropdowns(_07_DropdownTest.java:70)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
                   <em>
-(TC001: Validate checkbox in hero app)                  </em>
+(TC578: Validate Expedia dropdowns)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression-class-failed -->
+          <div class="suite-Regression-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">scripts._06_RadioButtonTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testFacebookGenderRadioButtons">
+                  </a> <!-- testFacebookGenderRadioButtons -->
+                  <span class="method-name">testFacebookGenderRadioButtons</span>
+                  <em>
+(TC234: Validate Facebook gender radio buttons)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression-class-passed -->
+          <div class="suite-Regression-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">scripts._04_GoogleSearchTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGoogleStoreLink">
+                  </a> <!-- testGoogleStoreLink -->
+                  <span class="method-name">testGoogleStoreLink</span>
+                  <em>
+(TC123: Validate Google Store link)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -206,40 +275,6 @@
           <div class="suite-Regression-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">scripts._04_GoogleSearchTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testGoogleStoreLink">
-                  </a> <!-- testGoogleStoreLink -->
-                  <span class="method-name">testGoogleStoreLink</span>
-                  <em>
-(TC123: Validate Google Store link)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Regression-class-passed -->
-          <div class="suite-Regression-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">scripts._06_RadioButtonTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testFacebookGenderRadioButtons">
-                  </a> <!-- testFacebookGenderRadioButtons -->
-                  <span class="method-name">testFacebookGenderRadioButtons</span>
-                  <em>
-(TC234: Validate Facebook gender radio buttons)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Regression-class-passed -->
-          <div class="suite-Regression-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">scripts._07_DropdownTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -254,20 +289,28 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testExpediaDropdowns">
-                  </a> <!-- testExpediaDropdowns -->
-                  <span class="method-name">testExpediaDropdowns</span>
-                  <em>
-(TC578: Validate Expedia dropdowns)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="testUnsecurePasswordErrorMessage">
                   </a> <!-- testUnsecurePasswordErrorMessage -->
                   <span class="method-name">testUnsecurePasswordErrorMessage</span>
                   <em>
 (TC763: Validate Facebook sign in error message for password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression-class-passed -->
+          <div class="suite-Regression-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">scripts._05_CheckBoxTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCheckBoxInHeroApp">
+                  </a> <!-- testCheckBoxInHeroApp -->
+                  <span class="method-name">testCheckBoxInHeroApp</span>
+                  <em>
+(TC001: Validate checkbox in hero app)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -345,35 +388,35 @@ data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testExpediaDropdowns')
 data.setCell(0, 2, 'scripts._07_DropdownTest')
-data.setCell(0, 3, 39126);
+data.setCell(0, 3, 40015);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testGoogleStoreLink')
-data.setCell(1, 2, 'scripts._04_GoogleSearchTest')
-data.setCell(1, 3, 5662);
+data.setCell(1, 1, 'testUnsecurePasswordErrorMessage')
+data.setCell(1, 2, 'scripts._07_DropdownTest')
+data.setCell(1, 3, 7517);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testUnsecurePasswordErrorMessage')
-data.setCell(2, 2, 'scripts._07_DropdownTest')
-data.setCell(2, 3, 5012);
+data.setCell(2, 1, 'testMainHeader')
+data.setCell(2, 2, 'scripts._03_EtsyTest')
+data.setCell(2, 3, 6113);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testMainHeader')
-data.setCell(3, 2, 'scripts._03_EtsyTest')
-data.setCell(3, 3, 4594);
+data.setCell(3, 1, 'testGoogleStoreLink')
+data.setCell(3, 2, 'scripts._04_GoogleSearchTest')
+data.setCell(3, 3, 4396);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'testFacebookGenderRadioButtons')
 data.setCell(4, 2, 'scripts._06_RadioButtonTest')
-data.setCell(4, 3, 4086);
+data.setCell(4, 3, 4118);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'testCheckBoxInHeroApp')
 data.setCell(5, 2, 'scripts._05_CheckBoxTest')
-data.setCell(5, 3, 3124);
+data.setCell(5, 3, 3519);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'testAppleURL')
 data.setCell(6, 2, 'scripts._01_AppleTest')
-data.setCell(6, 3, 2336);
+data.setCell(6, 3, 2670);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'testEbayDropdown')
 data.setCell(7, 2, 'scripts._07_DropdownTest')
-data.setCell(7, 3, 1);
+data.setCell(7, 3, 0);
 window.suiteTableData['Regression']= { tableData: data, tableDiv: 'times-div-Regression'}
 return data;
 }
@@ -397,6 +440,13 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
+              <span class="ignored-class-name">scripts._04_GoogleSearchTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">testGoogleSearch</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
               <span class="ignored-class-name">scripts._01_AppleTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">testAppleTitle</span>
@@ -416,13 +466,6 @@ return data;
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">scripts._04_GoogleSearchTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">testGoogleSearch</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Regression" class="panel">
@@ -438,110 +481,112 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testAppleURL</span>
-                <span class="method-start">4713 ms</span>
+                <span class="method-start">23592 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">7059 ms</span>
+                <span class="method-start">26269 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">scripts._03_EtsyTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">10337 ms</span>
+                <span class="method-start">29554 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testMainHeader</span>
-                <span class="method-start">12574 ms</span>
+                <span class="method-start">32037 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">17169 ms</span>
+                <span class="method-start">38150 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">scripts._04_GoogleSearchTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">20475 ms</span>
+                <span class="method-start">41539 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testGoogleStoreLink</span>
-                <span class="method-start">22684 ms</span>
+                <span class="method-start">44211 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">28346 ms</span>
+                <span class="method-start">48608 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">scripts._05_CheckBoxTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">31635 ms</span>
+                <span class="method-start">51943 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testCheckBoxInHeroApp</span>
-                <span class="method-start">33822 ms</span>
+                <span class="method-start">54713 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">36946 ms</span>
+                <span class="method-start">58232 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">scripts._06_RadioButtonTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">40131 ms</span>
+                <span class="method-start">61456 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testFacebookGenderRadioButtons</span>
-                <span class="method-start">42271 ms</span>
+                <span class="method-start">64318 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">46358 ms</span>
+                <span class="method-start">68437 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">scripts._07_DropdownTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">49574 ms</span>
+                <span class="method-start">71704 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testUnsecurePasswordErrorMessage</span>
-                <span class="method-start">51802 ms</span>
+                <span class="method-start">73977 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">56814 ms</span>
+                <span class="method-start">81495 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">60039 ms</span>
+                <span class="method-start">84723 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testExpediaDropdowns</span>
-                <span class="method-start">62244 ms</span>
+                <span class="method-start">87050 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">101370 ms</span>
+                <span class="method-start">127082 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">104995 ms</span>
+                <span class="method-start">130818 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testEbayDropdown</span>
-                <span class="method-start">107600 ms</span>
+                <span class="method-start">133575 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">107601 ms</span>
+                <span class="method-start">133578 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
