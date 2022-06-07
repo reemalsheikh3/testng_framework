@@ -26,10 +26,10 @@ public class Driver {
             // Telling your system where your chrome driver is located
             //System.setProperty("webdriver.chrome.driver", "/Users/techglobal/IdeaProjects/selenium_intro/chromedriver");
 
+            //The browser defined below with string is hard coded
+            //String browser = "chrome"; //define which browser you will run your test in
 
-            String browser = "chrome"; //define which browser you will run your test in
-
-            switch (browser){
+            switch (ConfigReader.getProperty("browser")){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
@@ -49,7 +49,7 @@ public class Driver {
             // Create the object of the web browser that you are automating
             driver.manage().window().maximize();
             //waiting only that web element to be EXISTED
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(Long.parseLong(ConfigReader.getProperty("implicitWait")), TimeUnit.SECONDS);
         }
         return driver;
     }
