@@ -24,6 +24,15 @@ public class HeroAppPage {
     @FindBy(id = "result")
     public WebElement resultParagraph;
 
+    @FindBy(xpath = "//a[text()='iFrame']")
+    public WebElement iFrameLink;
+
+    @FindBy(css = "#tinymce>p")
+    public WebElement contentBox;
+
+    @FindBy(xpath = "//h3")
+    public WebElement iFrameHeader3;
+
     public void clickOnLink(String linkText){
         for (WebElement link : links) {
             if(link.getText().equals(linkText)){

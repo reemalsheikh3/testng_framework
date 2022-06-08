@@ -83,10 +83,7 @@ public class _07_DropdownTest extends Base{
     NOTE: Validation includes headings to be displayed and texts to be exactly matching above texts
      */
 
-    @Test(priority = 3, description = "TC242: Validate Ebay dropdown")
-    public void testEbayDropdown(){
 
-    }
 
 
 
