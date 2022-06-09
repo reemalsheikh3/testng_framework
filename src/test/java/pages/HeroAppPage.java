@@ -33,6 +33,30 @@ public class HeroAppPage {
     @FindBy(xpath = "//h3")
     public WebElement iFrameHeader3;
 
+    @FindBy(css = "a[href='/windows/new']")
+    public WebElement clickHereMultipleWindows;
+
+    @FindBy(xpath = "//h3")
+    public WebElement getMultipleWindowsHeader3;
+
+    @FindBy(xpath = "//h3")
+    public WebElement OpenNewWindowHeader3;
+
+    @FindBy(id = "file-upload")
+    public WebElement chooseFileInputBox;
+
+    @FindBy(id = "file-submit")
+    public WebElement uploadFileButton;
+
+    @FindBy(xpath = "//h3")
+    public WebElement fileUploadedH3;
+
+    @FindBy(id = "uploaded-files")
+    public WebElement uploadedFileText;
+
+    @FindBy(linkText = "myFileReem2.xls")
+    public WebElement downloadFileLink;
+
     public void clickOnLink(String linkText){
         for (WebElement link : links) {
             if(link.getText().equals(linkText)){
