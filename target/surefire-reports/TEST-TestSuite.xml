@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="142.768" tests="8" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="360.545" tests="25" errors="0" skipped="0" failures="4">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="18.0.1+0"/>
@@ -40,7 +40,7 @@
     <property name="java.class.path" value="/usr/local/Cellar/maven/3.8.5/libexec/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="18"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -PRegression"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test -PRegression"/>
     <property name="java.home" value="/usr/local/Cellar/openjdk/18.0.1/libexec/openjdk.jdk/Contents/Home"/>
     <property name="apple.awt.application.name" value="Launcher"/>
     <property name="user.language" value="en"/>
@@ -61,32 +61,82 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="testAppleURL" classname="scripts._01_AppleTest" time="2.678"/>
-  <testcase name="testMainHeader" classname="scripts._03_EtsyTest" time="6.109"/>
-  <testcase name="testGoogleStoreLink" classname="scripts._04_GoogleSearchTest" time="4.396"/>
-  <testcase name="testCheckBoxInHeroApp" classname="scripts._05_CheckBoxTest" time="3.519"/>
-  <testcase name="testFacebookGenderRadioButtons" classname="scripts._06_RadioButtonTest" time="4.118"/>
-  <testcase name="testUnsecurePasswordErrorMessage" classname="scripts._07_DropdownTest" time="7.518"/>
-  <testcase name="testExpediaDropdowns" classname="scripts._07_DropdownTest" time="40.034">
-    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#preferred\-class\-input&quot;}&#10;  (Session info: chrome=102.0.5005.61)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Reems-MacBook-Air.local&apos;, ip: &apos;2601:244:4801:930:6c1c:5e90:3426:1199%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.1&apos;, java.version: &apos;18.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/01/c_s4m6zs411...}, goog:chromeOptions: {debuggerAddress: localhost:58701}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: bcd7dd45e0360cb0401c2c19adf4a999&#10;*** Element info: {Using=id, value=preferred-class-input}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+  <testcase name="testAppleURL" classname="scripts._01_AppleTest" time="2.156"/>
+  <testcase name="testMainHeader" classname="scripts._03_EtsyTest" time="3.334">
+    <failure message="expected [Shop Home Sales!] but found [Father&apos;s Day Gifts]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Shop Home Sales!] but found [Father's Day Gifts]
+	at scripts._03_EtsyTest.testMainHeader(_03_EtsyTest.java:85)
+</failure>
+    <system-err><![CDATA[Starting ChromeDriver 102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}) on port 24346
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 11, 2022 2:37:00 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testGoogleStoreLink" classname="scripts._04_GoogleSearchTest" time="4.729"/>
+  <testcase name="testCheckBoxInHeroApp" classname="scripts._05_CheckBoxTest" time="5.6"/>
+  <testcase name="testFacebookGenderRadioButtons" classname="scripts._06_RadioButtonTest" time="4.318"/>
+  <testcase name="testUnsecurePasswordErrorMessage" classname="scripts._07_DropdownTest" time="8.025"/>
+  <testcase name="testExpediaDropdowns" classname="scripts._07_DropdownTest" time="28.522">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#preferred\-class\-input&quot;}&#10;  (Session info: chrome=102.0.5005.61)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Reems-MacBook-Air.local&apos;, ip: &apos;2601:244:4801:930:8944:9f77:96a:fae6%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.1&apos;, java.version: &apos;18.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/01/c_s4m6zs411...}, goog:chromeOptions: {debuggerAddress: localhost:64755}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 32c8e19a27a07be5851266b3d20970a7&#10;*** Element info: {Using=id, value=preferred-class-input}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
 no such element: Unable to locate element: {"method":"css selector","selector":"#preferred\-class\-input"}
   (Session info: chrome=102.0.5005.61)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Reems-MacBook-Air.local', ip: '2601:244:4801:930:6c1c:5e90:3426:1199%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '18.0.1'
+System info: host: 'Reems-MacBook-Air.local', ip: '2601:244:4801:930:8944:9f77:96a:fae6%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.1', java.version: '18.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/01/c_s4m6zs411...}, goog:chromeOptions: {debuggerAddress: localhost:58701}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: bcd7dd45e0360cb0401c2c19adf4a999
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/01/c_s4m6zs411...}, goog:chromeOptions: {debuggerAddress: localhost:64755}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 32c8e19a27a07be5851266b3d20970a7
 *** Element info: {Using=id, value=preferred-class-input}
 	at scripts._07_DropdownTest.testExpediaDropdowns(_07_DropdownTest.java:70)
 </failure>
-    <system-err><![CDATA[Starting ChromeDriver 102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}) on port 12472
+    <system-err><![CDATA[Starting ChromeDriver 102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}) on port 17590
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Jun 02, 2022 7:38:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Jun 11, 2022 2:37:56 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="testEbayDropdown" classname="scripts._07_DropdownTest" time="0"/>
+  <testcase name="testEtsySignInModal" classname="scripts._08_Alerts" time="15.746"/>
+  <testcase name="testInformationWarningAlert" classname="scripts._08_Alerts" time="1.754"/>
+  <testcase name="testConfirmationAlert" classname="scripts._08_Alerts" time="16.879"/>
+  <testcase name="testPromptAlert" classname="scripts._08_Alerts" time="2.124"/>
+  <testcase name="testAmazonAddressModal" classname="scripts._08_Alerts" time="14.454">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at scripts._08_Alerts.testAmazonAddressModal(_08_Alerts.java:150)
+</failure>
+    <system-err><![CDATA[Starting ChromeDriver 102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}) on port 13807
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 11, 2022 2:39:31 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="testIFrame1" classname="scripts._09_IFrames" time="2.46"/>
+  <testcase name="testIFrame2" classname="scripts._09_IFrames" time="3.918"/>
+  <testcase name="testTechGlobalSchoolFaceBookIcon" classname="scripts._10_WindowHandles" time="5.053"/>
+  <testcase name="testWindowHandle2" classname="scripts._10_WindowHandles" time="1.646"/>
+  <testcase name="testFileUpload1" classname="scripts._11_FileUpload" time="9.211"/>
+  <testcase name="testFileDownload" classname="scripts._11_FileUpload" time="2.402"/>
+  <testcase name="moveToElementPractice1" classname="scripts._12_Actions_Class" time="6.239"/>
+  <testcase name="moveToElementPractice2" classname="scripts._12_Actions_Class" time="26.205"/>
+  <testcase name="clickOnElementPractice" classname="scripts._12_Actions_Class" time="2.153">
+    <failure message="expected [https://www.techglobalschool.com/apply-now-1] but found [https://www.techglobalschool.com/]" type="java.lang.AssertionError">java.lang.AssertionError: expected [https://www.techglobalschool.com/apply-now-1] but found [https://www.techglobalschool.com/]
+	at scripts._12_Actions_Class.clickOnElementPractice(_12_Actions_Class.java:76)
+</failure>
+    <system-err><![CDATA[Starting ChromeDriver 102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}) on port 42275
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun 11, 2022 2:41:54 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="rightClickPractice" classname="scripts._12_Actions_Class" time="2.299"/>
+  <testcase name="clickHoldAndReleasePractice" classname="scripts._12_Actions_Class" time="4.104"/>
+  <testcase name="sendKeysToAnElement" classname="scripts._12_Actions_Class" time="2.001"/>
+  <testcase name="practiceKeyDownAndKeyUp" classname="scripts._12_Actions_Class" time="9.958"/>
 </testsuite>

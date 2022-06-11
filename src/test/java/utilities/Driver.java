@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -42,14 +43,19 @@ public class Driver {
                     WebDriverManager.getInstance(SafariDriver.class).setup();
                     driver = new SafariDriver();
                     break;
+                case"headless":
+                    driver = new HtmlUnitDriver();
+                    break;
                 default:
                     throw new NotFoundException("Browser is NOT DEFINED properly!!");
             }
 
-            // Create the object of the web browser that you are automating
-            driver.manage().window().maximize();
-            //waiting only that web element to be EXISTED
-            driver.manage().timeouts().implicitlyWait(Long.parseLong(ConfigReader.getProperty("implicitWait")), TimeUnit.SECONDS);
+            if (!ConfigReader.getProperty("browser").equals("headless")) {
+                // Create the object of the web browser that you are automating
+                driver.manage().window().maximize();
+                //waiting only that web element to be EXISTED
+                driver.manage().timeouts().implicitlyWait(Long.parseLong(ConfigReader.getProperty("implicitWait")), TimeUnit.SECONDS);
+            }
         }
         return driver;
     }
