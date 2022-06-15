@@ -57,6 +57,17 @@ public class HeroAppPage {
     @FindBy(linkText = "myFileReem2.xls")
     public WebElement downloadFileLink;
 
+    @FindBy(css = "#table1 th")
+    public List<WebElement> tableHeaderText;
+
+    @FindBy(css = "#table1>tbody>tr:nth-child(1)>td")
+    public List<WebElement> firstRowFirstTable;
+
+    @FindBy(css = "#table1>tbody>tr>td:nth-child(2)")
+    public List<WebElement> tableOneSecondColumn;
+
+    @FindBy(css = "#table1 td")
+    public List<WebElement> allCellsOfTableOne;
     public void clickOnLink(String linkText){
         for (WebElement link : links) {
             if(link.getText().equals(linkText)){
@@ -74,4 +85,13 @@ public class HeroAppPage {
             }
         }
     }
+
+    @FindBy(id = "username")
+    public WebElement username;
+
+    @FindBy(id = "password")
+    public WebElement password;
+
+    @FindBy(css = ".radius")
+    public WebElement loginButton;
 }
